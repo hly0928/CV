@@ -1,0 +1,29 @@
+---
+import Head from '../components/Head.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  noindex?: boolean;
+  wide?: boolean;
+}
+
+const { title, description, noindex = false, wide = false } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <Head {title} {description} {noindex} />
+  </head>
+  <body>
+    <Nav />
+    <main class:list={['page-shell', { 'page-shell--wide': wide }]}>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

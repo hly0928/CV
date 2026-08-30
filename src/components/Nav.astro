@@ -1,0 +1,26 @@
+---
+import { SITE_TITLE } from '../consts';
+
+const pathname = Astro.url.pathname;
+const links = [
+  { href: '/work/', label: 'Work' },
+  { href: '/cv/', label: 'CV' },
+];
+---
+
+<header class="site-header">
+  <nav class="nav-shell" aria-label="Primary navigation">
+    <a class="site-name" href="/">{SITE_TITLE}</a>
+    <ul>
+      {
+        links.map(({ href, label }) => (
+          <li>
+            <a href={href} aria-current={pathname.startsWith(href) ? 'page' : undefined}>
+              {label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</header>

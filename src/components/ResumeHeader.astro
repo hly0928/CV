@@ -1,0 +1,32 @@
+---
+import type { ResumeFrontmatter } from '../types';
+
+interface Props {
+  resume: ResumeFrontmatter;
+}
+
+const { resume } = Astro.props;
+---
+
+<header class="resume-header">
+  <p class="eyebrow">Curriculum vitae</p>
+  <h1>{resume.name}</h1>
+  <p class="resume-headline">{resume.headline}</p>
+  <address>
+    <span>{resume.location}</span>
+    <a href={`mailto:${resume.email}`}>{resume.email}</a>
+    <a href={resume.github}>GitHub</a>
+    <a href={resume.site}>Portfolio</a>
+  </address>
+  {resume.workRights && <p class="resume-rights">{resume.workRights}</p>}
+  <div class="resume-languages" aria-label="Languages">
+    {
+      resume.languages.map((language) => (
+        <p>
+          <strong>{language.name}</strong> — {language.level}
+          {language.evidence && <span> · {language.evidence}</span>}
+        </p>
+      ))
+    }
+  </div>
+</header>

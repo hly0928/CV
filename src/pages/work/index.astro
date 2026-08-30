@@ -1,0 +1,37 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import WorkCard from '../../components/WorkCard.astro';
+
+const work = (await getCollection('work', ({ data }) => import.meta.env.DEV || !data.draft)).sort(
+  (a, b) => a.data.order - b.data.order,
+);
+---
+
+<Base
+  title="Work"
+  description="Case studies in system design, technical troubleshooting, and documentation by Clementine Hu."
+>
+  <header class="page-intro">
+    <p class="eyebrow">Work</p>
+    <h1>Problems, decisions, evidence, and limits</h1>
+    <p>
+      These case studies cover workflow design, technical documentation, software and hardware
+      troubleshooting, and small automation systems. They are ordered from newest to oldest.
+    </p>
+  </header>
+
+  <div class="work-list">
+    {work.map((entry) => <WorkCard {entry} />)}
+  </div>
+
+  <aside class="writing-note" aria-labelledby="writing-note-title">
+    <h2 id="writing-note-title">How these were written</h2>
+    <p>
+      Each case is based on an actual project, workflow, or technical problem. The writing centres
+      on context, judgement, implementation, evidence, and limits. Academic work is identified as
+      academic work, personal systems are not presented as commercial products, and unverified
+      impact figures are not used.
+    </p>
+  </aside>
+</Base>

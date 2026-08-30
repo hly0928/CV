@@ -1,0 +1,84 @@
+---
+import { getCollection } from 'astro:content';
+import type { ResumeFrontmatter } from '../types';
+import { frontmatter } from '../content/resume.md';
+import Base from '../layouts/Base.astro';
+import WorkCard from '../components/WorkCard.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+
+const resume = frontmatter as ResumeFrontmatter;
+const work = (await getCollection('work', ({ data }) => import.meta.env.DEV || !data.draft))
+  .sort((a, b) => a.data.order - b.data.order)
+  .slice(0, 4);
+---
+
+<Base title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <section class="hero" aria-labelledby="hero-title">
+    <p class="eyebrow">Perth, Western Australia</p>
+    <h1 id="hero-title">{resume.name}</h1>
+    <p class="hero__headline">{resume.headline}</p>
+    <p class="hero__intro">
+      Early-career IT professional with a background spanning information technology and
+      administrative management, focused on clear technical communication, documentation systems,
+      structured processes, practical troubleshooting, and maintainable knowledge.
+    </p>
+    <div class="hero__actions">
+      <a class="button" href="/work/">View work</a>
+      <a class="text-link" href="/cv/">Read the CV <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+
+  <section class="featured-work" aria-labelledby="featured-title">
+    <div class="section-heading">
+      <p class="eyebrow">Selected work</p>
+      <h2 id="featured-title">Case studies grounded in evidence</h2>
+    </div>
+    <div class="work-carousel" data-work-carousel>
+      <div
+        class="work-grid"
+        role="region"
+        aria-label="Selected case studies"
+        tabindex="0"
+        data-work-carousel-track
+      >
+        {work.map((entry) => <WorkCard {entry} />)}
+      </div>
+      <button
+        class="work-carousel__hint"
+        type="button"
+        aria-label="Scroll selected work to the right"
+        data-work-carousel-next
+        hidden
+      >→</button>
+    </div>
+  </section>
+</Base>
+
+<script>
+  const carousels = document.querySelectorAll<HTMLElement>('[data-work-carousel]');
+
+  for (const carousel of carousels) {
+    const track = carousel.querySelector<HTMLElement>('[data-work-carousel-track]');
+    const next = carousel.querySelector<HTMLButtonElement>('[data-work-carousel-next]');
+
+    if (!track || !next) continue;
+
+  const updateNext = () => {
+    const maxScroll = track.scrollWidth - track.clientWidth;
+    const atStart = track.scrollLeft <= 2;
+    const atEnd = maxScroll <= 1 || track.scrollLeft >= maxScroll - 2;
+
+    next.hidden = atEnd;
+    carousel.classList.add('is-enhanced');
+    carousel.classList.toggle('is-at-start', atStart);
+    carousel.classList.toggle('is-at-end', atEnd);
+  };
+
+    next.addEventListener('click', () => {
+      track.scrollBy({ left: track.clientWidth, behavior: 'smooth' });
+    });
+    track.addEventListener('scroll', updateNext, { passive: true });
+    new ResizeObserver(updateNext).observe(track);
+    requestAnimationFrame(updateNext);
+  }
+</script>

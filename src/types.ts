@@ -9,6 +9,7 @@ export interface CVFrontmatter {
   headline: string;
   location: string;
   email: string;
+  linkedin: string;
   github: string;
   site: string;
   workRights?: string;

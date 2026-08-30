@@ -3,6 +3,7 @@ name: 'Clementine Hu'
 headline: 'Technical Documentation · Knowledge Management'
 location: 'East Perth, WA, Australia'
 email: 'hulinyi928@gmail.com'
+linkedin: 'https://www.linkedin.com/in/hly0928'
 github: 'https://github.com/hly0928'
 site: 'https://cv.hly0928.com'
 workRights: 'Temporary Graduate visa (subclass 485) · Unrestricted Australian work rights'
@@ -70,7 +71,7 @@ Early-career IT professional and multidisciplinary analyst with a Master of Info
 
 ## Projects
 
-### UWA Study Planner
+### UWA Study Planner · [GitHub](https://github.com/hly0928/CITS5206-Group-Project) · [Live demo](https://uwa-study-planner.hly0928.com)
 
 *2025 · The University of Western Australia*
 
@@ -79,7 +80,7 @@ Early-career IT professional and multidisciplinary analyst with a Master of Info
 - Configured and troubleshot Python and Node development environments and React-to-Django API communication across local environments.
 - Collaborated through feature branches, pull requests and shared documentation, and supported integration, defect resolution, testing, and user and developer documentation.
 
-### Job Application Tracker
+### Job Application Tracker · [GitHub](https://github.com/hly0928/CITS5505-Group-Project)
 
 *2025 · The University of Western Australia*
 
@@ -87,7 +88,7 @@ Early-career IT professional and multidisciplinary analyst with a Master of Info
 - Presented application progress through interactive tables and visual summaries.
 - Configured SQLite test data and repeatable local and deployed environments, validated core workflows with Pytest and Selenium, and documented launch and testing procedures.
 
-### Personal Technical Documentation
+### Personal Technical Documentation · [Blog](https://blog.hly0928.com) · [Archive](https://archive.blog.hly0928.com)
 
 *2018 – present*
 
@@ -95,14 +96,14 @@ Early-career IT professional and multidisciplinary analyst with a Master of Info
 - Publish practical articles and step-by-step documentation covering Windows troubleshooting, PC and BIOS configuration, hardware setup, device workflows and consumer technology.
 - Maintain site structure, content updates, deployment configuration and archival continuity.
 
-### Containerised Networking Service
+### Containerised Networking Service · [GitHub](https://github.com/hly0928/Docker-UnblockNeteaseMusic-ss)
 
 *2020 – present*
 
 - Created and maintain a lightweight Docker image combining several network services, with ports, encryption, obfuscation, failover and source-selection settings exposed through environment variables.
 - Document quick-start and advanced configuration, maintain build dependencies and architecture selection, and apply iterative fixes.
 
-### Network Configuration and Automation Repository
+### Network Configuration and Automation Repository · [GitHub](https://github.com/hly0928/Proxy-profiles)
 
 *2019 – present*
 

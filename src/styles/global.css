@@ -211,6 +211,10 @@ code {
   width: min(940px, calc(100% - 2rem));
 }
 
+.page-shell--home {
+  padding-top: clamp(2.5rem, 5vw, 4.5rem);
+}
+
 .site-footer {
   width: min(1120px, calc(100% - 2rem));
   margin: 0 auto;
@@ -259,6 +263,36 @@ code {
   width: 100%;
   max-width: none;
   text-wrap: pretty;
+}
+
+.hero__social {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.hero__social a {
+  display: grid;
+  width: 2.45rem;
+  height: 2.45rem;
+  border: 1px solid rgba(var(--gray), 25%);
+  border-radius: 999px;
+  place-items: center;
+  color: rgb(var(--text));
+  transition: border-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.hero__social a:hover {
+  border-color: var(--accent);
+  color: var(--accent-dark);
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+.hero__social svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: currentColor;
 }
 
 .hero__actions {
@@ -677,6 +711,10 @@ code {
 
   .page-shell {
     padding-block: 3rem;
+  }
+
+  .page-shell--home {
+    padding-top: 2.25rem;
   }
 
   .hero {

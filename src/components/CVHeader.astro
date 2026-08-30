@@ -15,6 +15,7 @@ const { cv } = Astro.props;
   <address>
     <span>{cv.location}</span>
     <a href={`mailto:${cv.email}`}>{cv.email}</a>
+    <a href={cv.linkedin}>LinkedIn</a>
     <a href={cv.github}>GitHub</a>
     <a href={cv.site}>Portfolio</a>
   </address>

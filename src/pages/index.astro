@@ -6,6 +6,8 @@ import Base from '../layouts/Base.astro';
 import WorkCard from '../components/WorkCard.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 
+export const prerender = true;
+
 const cv = frontmatter as CVFrontmatter;
 const work = (await getCollection('work', ({ data }) => import.meta.env.DEV || !data.draft))
   .sort((a, b) => a.data.order - b.data.order)
@@ -18,9 +20,9 @@ const work = (await getCollection('work', ({ data }) => import.meta.env.DEV || !
     <h1 id="hero-title">{cv.name}</h1>
     <p class="hero__headline">{cv.headline}</p>
     <p class="hero__intro">
-      Early-career IT professional with a background spanning information technology and
-      administrative management, focused on clear technical communication, documentation systems,
-      structured processes, practical troubleshooting, and maintainable knowledge.
+      I document how systems work, investigate practical problems, and turn troubleshooting into
+      guidance others can follow. My background combines information technology with administrative
+      management.
     </p>
     <nav class="hero__social" aria-label="Professional profiles and contact">
       <a href={cv.linkedin} aria-label="LinkedIn" title="LinkedIn">

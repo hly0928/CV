@@ -1,6 +1,6 @@
 ---
 title: 'Documentation for a High-Integrity Workflow Template'
-summary: 'Documentation that turns a safety-sensitive workflow into explicit sources of truth, lifecycle states, approval checks, privacy boundaries, and recovery steps.'
+summary: 'Documentation that makes a high-integrity workflow''s sources of truth, lifecycle states, approval checks, privacy boundaries, and recovery steps explicit.'
 kind: 'documentation'
 role: 'Documentation designer and maintainer'
 period: '2026-08 – present'
@@ -29,9 +29,9 @@ The implementation encoded important invariants that were easy to miss when read
 
 ## What I did
 
-I divided the material by reader need. The repository README defines the source-of-truth hierarchy, map, lifecycle, safety boundaries, approval identity, privacy model, tests, and command surface. The first-run guide converts that model into an ordered setup and operating sequence. Role documents bound the responsibilities of discovery, audit, material preparation, and submission work. Configuration comments and placeholder files show the expected shape without introducing fictional candidate data.
+I divided the material by reader need. The repository README defines the source-of-truth hierarchy, map, lifecycle, integrity boundaries, approval identity, privacy model, tests, and command surface. The first-run guide converts that model into an ordered setup and operating sequence. Role documents bound the responsibilities of discovery, audit, material preparation, and submission work. Configuration comments and placeholder files show the expected shape without introducing fictional candidate data.
 
-I used AI-assisted prose drafting, then checked each operational claim against the repository tree, controller, tests, and configuration. I also repeated safety rules only where the reader needed to act on them, keeping their wording aligned with the controller rather than expanding them into unsupported promises.
+I used AI-assisted prose drafting, then checked each operational claim against the repository tree, controller, tests, and configuration. I also repeated workflow invariants only where the reader needed to act on them, keeping their wording aligned with the controller rather than expanding them into unsupported promises.
 
 ## Artefacts and evidence
 

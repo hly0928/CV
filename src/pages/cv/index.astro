@@ -4,6 +4,8 @@ import type { CVFrontmatter } from '../../types';
 import Base from '../../layouts/Base.astro';
 import CVHeader from '../../components/CVHeader.astro';
 
+export const prerender = true;
+
 const cv = frontmatter as CVFrontmatter;
 ---
 

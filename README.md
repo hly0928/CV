@@ -32,9 +32,9 @@ Node 18.20.8 or newer is required.
 
 ## Editing the CV
 
-`src/content/resume.md` is the CV's only factual source. Its frontmatter supplies the fixed header data and its Markdown body supplies every CV section. Do not duplicate or edit the CV body in an `.astro` page.
+`src/content/cv.md` is the CV's only factual source. Its frontmatter supplies the fixed header data and its Markdown body supplies every CV section. Do not duplicate or edit the CV body in an `.astro` page.
 
-## Resume Markdown convention
+## CV Markdown convention
 
 - Use `##` for a section.
 - Use `###` for an entry.

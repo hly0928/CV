@@ -1,0 +1,32 @@
+---
+import type { CVFrontmatter } from '../types';
+
+interface Props {
+  cv: CVFrontmatter;
+}
+
+const { cv } = Astro.props;
+---
+
+<header class="cv-header">
+  <p class="eyebrow">Curriculum vitae</p>
+  <h1>{cv.name}</h1>
+  <p class="cv-headline">{cv.headline}</p>
+  <address>
+    <span>{cv.location}</span>
+    <a href={`mailto:${cv.email}`}>{cv.email}</a>
+    <a href={cv.github}>GitHub</a>
+    <a href={cv.site}>Portfolio</a>
+  </address>
+  {cv.workRights && <p class="cv-rights">{cv.workRights}</p>}
+  <div class="cv-languages" aria-label="Languages">
+    {
+      cv.languages.map((language) => (
+        <p>
+          <strong>{language.name}</strong> — {language.level}
+          {language.evidence && <span> · {language.evidence}</span>}
+        </p>
+      ))
+    }
+  </div>
+</header>

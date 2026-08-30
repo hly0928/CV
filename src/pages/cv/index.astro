@@ -1,17 +1,17 @@
 ---
-import Resume, { frontmatter } from '../../content/resume.md';
-import type { ResumeFrontmatter } from '../../types';
+import CV, { frontmatter } from '../../content/cv.md';
+import type { CVFrontmatter } from '../../types';
 import Base from '../../layouts/Base.astro';
-import ResumeHeader from '../../components/ResumeHeader.astro';
+import CVHeader from '../../components/CVHeader.astro';
 
-const resume = frontmatter as ResumeFrontmatter;
+const cv = frontmatter as CVFrontmatter;
 ---
 
 <Base title="CV" description="Curriculum vitae for Clementine Hu." wide>
-  <article class="resume-page">
-    <ResumeHeader {resume} />
-    <div class="resume-body prose">
-      <Resume />
+  <article class="cv-page">
+    <CVHeader {cv} />
+    <div class="cv-body prose">
+      <CV />
     </div>
   </article>
 </Base>

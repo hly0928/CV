@@ -1,12 +1,12 @@
 ---
 import { getCollection } from 'astro:content';
-import type { ResumeFrontmatter } from '../types';
-import { frontmatter } from '../content/resume.md';
+import type { CVFrontmatter } from '../types';
+import { frontmatter } from '../content/cv.md';
 import Base from '../layouts/Base.astro';
 import WorkCard from '../components/WorkCard.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 
-const resume = frontmatter as ResumeFrontmatter;
+const cv = frontmatter as CVFrontmatter;
 const work = (await getCollection('work', ({ data }) => import.meta.env.DEV || !data.draft))
   .sort((a, b) => a.data.order - b.data.order)
   .slice(0, 4);
@@ -15,8 +15,8 @@ const work = (await getCollection('work', ({ data }) => import.meta.env.DEV || !
 <Base title={SITE_TITLE} description={SITE_DESCRIPTION}>
   <section class="hero" aria-labelledby="hero-title">
     <p class="eyebrow">Perth, Western Australia</p>
-    <h1 id="hero-title">{resume.name}</h1>
-    <p class="hero__headline">{resume.headline}</p>
+    <h1 id="hero-title">{cv.name}</h1>
+    <p class="hero__headline">{cv.headline}</p>
     <p class="hero__intro">
       Early-career IT professional with a background spanning information technology and
       administrative management, focused on clear technical communication, documentation systems,

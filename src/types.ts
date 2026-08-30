@@ -1,10 +1,10 @@
-export interface ResumeLanguage {
+export interface CVLanguage {
   name: string;
   level: string;
   evidence?: string;
 }
 
-export interface ResumeFrontmatter {
+export interface CVFrontmatter {
   name: string;
   headline: string;
   location: string;
@@ -12,5 +12,5 @@ export interface ResumeFrontmatter {
   github: string;
   site: string;
   workRights?: string;
-  languages: ResumeLanguage[];
+  languages: CVLanguage[];
 }

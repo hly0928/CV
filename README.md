@@ -28,7 +28,7 @@ Start the standalone production server after building:
 npm start
 ```
 
-Node 18.20.8 or newer is required.
+Node 22.12.0 or newer is required.
 
 ## Editing the CV
 

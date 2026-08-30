@@ -21,21 +21,19 @@ Early-career IT professional and multidisciplinary analyst with a Master of Info
 
 ## Skills
 
-**Documentation and communication** — Technical documentation, Markdown, Git and GitHub workflows, documentation versioning, knowledge-base organisation, SOPs, troubleshooting notes, user-facing instructions, research, report writing and stakeholder communication.
+**Documentation and content systems** — Technical documentation, docs-as-code, Markdown, Git and GitHub workflows, information architecture, single-sourcing, style guide adherence, knowledge-base organisation, SOPs, troubleshooting guides, user-facing instructions, research and stakeholder communication.
 
 **IT support and systems** — Windows, macOS and Linux; hardware and software troubleshooting; installation, configuration and updates; user support; account, permission and access-control fundamentals; PC assembly and laptop or desktop hardware diagnosis.
 
-**Programming and scripting** — Python, Java, SQL, R, Bash and basic JavaScript; object-oriented programming, data structures, debugging and reusable scripting.
+**Programming and scripting** — Python, Java, SQL, R, Bash and JavaScript; object-oriented programming, data structures, debugging and reusable scripting.
 
-**Web and APIs** — React, Node.js, Django, Flask, HTML, CSS, Tailwind CSS, REST APIs and JSON; responsive interfaces, client-server integration and authentication concepts.
+**Web, APIs and publishing** — Static site generators (Hugo and Astro), React, Node.js, Django, Flask, HTML, CSS, Tailwind CSS, REST APIs and JSON; responsive interfaces and CI-based publishing with GitHub Actions.
 
 **Databases and analytics** — SQLite, relational database design and SQL; foundational MySQL and PostgreSQL; data cleaning, exploratory analysis, statistical testing and visualisation with R, Python, SPSS, Jupyter Notebook and spreadsheets.
 
 **Testing and quality** — Pytest, Selenium, unit and browser testing, repeatable test environments, software requirements, verification, defect investigation and quality-assurance documentation.
 
-**Cloud, delivery and networking** — Docker, Railway, Linux command line, Git and GitHub, feature branches, pull requests, environment configuration, deployment monitoring, TCP/IP, DNS, DHCP, Wi-Fi and routing fundamentals.
-
-**Professional practice** — Agile/Scrum, project management, requirements elicitation, analytical problem-solving, service orientation, cross-cultural teamwork, task prioritisation, presentation and attention to detail.
+**Delivery and professional practice** — Docker, Railway, Linux command line, feature branches, pull requests, environment configuration and deployment monitoring; Agile/Scrum, project management, requirements elicitation, analytical problem-solving, service orientation, cross-cultural teamwork and networking fundamentals.
 
 ## Experience
 

@@ -1,5 +1,5 @@
 ---
-title: 'Documentation for a Safety-Critical Workflow Template'
+title: 'Documentation for a High-Integrity Workflow Template'
 summary: 'Documentation that turns a safety-sensitive workflow into explicit sources of truth, lifecycle states, approval checks, privacy boundaries, and recovery steps.'
 kind: 'documentation'
 role: 'Documentation designer and maintainer'

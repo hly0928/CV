@@ -9,9 +9,18 @@ const cv = frontmatter as CVFrontmatter;
 
 <Base title="CV" description="Curriculum vitae for Clementine Hu." wide>
   <article class="cv-page">
+    <div class="cv-actions">
+      <button class="button" type="button" data-print-cv>Print / Download PDF</button>
+    </div>
     <CVHeader {cv} />
     <div class="cv-body prose">
       <CV />
     </div>
   </article>
 </Base>
+
+<script>
+  document.querySelector<HTMLButtonElement>('[data-print-cv]')?.addEventListener('click', () => {
+    window.print();
+  });
+</script>

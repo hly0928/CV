@@ -300,7 +300,7 @@ code {
   margin-top: 0.4rem;
   align-items: center;
   flex-wrap: wrap;
-  gap: 1.25rem;
+  gap: 2rem;
 }
 
 .button {
@@ -348,7 +348,13 @@ code {
 }
 
 .work-carousel {
+  --carousel-width: 100%;
+  --carousel-overhang: 0rem;
+  --carousel-shadow-gutter: 1.5rem;
+  --carousel-fade-width: 6rem;
+
   position: relative;
+  isolation: isolate;
 }
 
 .work-carousel::before,
@@ -357,7 +363,7 @@ code {
   z-index: 1;
   top: 0;
   bottom: 0;
-  width: 4.5rem;
+  width: var(--carousel-fade-width);
   content: '';
   opacity: 0;
   pointer-events: none;
@@ -365,7 +371,7 @@ code {
 }
 
 .work-carousel::before {
-  left: 0;
+  left: calc(0px - var(--carousel-overhang) - var(--carousel-shadow-gutter));
   background: linear-gradient(
     to left,
     rgba(var(--background), 0),
@@ -374,7 +380,7 @@ code {
 }
 
 .work-carousel::after {
-  right: 0;
+  right: calc(0px - var(--carousel-overhang) - var(--carousel-shadow-gutter));
   background: linear-gradient(
     to right,
     rgba(var(--background), 0),
@@ -388,14 +394,17 @@ code {
 }
 
 .featured-work .work-grid {
-  grid-auto-columns: calc((100% - 1.25rem) / 2);
+  width: calc(
+    var(--carousel-width) + var(--carousel-shadow-gutter) + var(--carousel-shadow-gutter)
+  );
+  margin-left: calc(0px - var(--carousel-overhang) - var(--carousel-shadow-gutter));
+  grid-auto-columns: calc((var(--carousel-width) - 1.25rem) / 2);
   grid-auto-flow: column;
-  padding: 1.5rem 1.5rem 2rem;
+  padding: 1.5rem var(--carousel-shadow-gutter) 2rem
+    calc(var(--carousel-overhang) + var(--carousel-shadow-gutter));
   overflow-x: auto;
   overflow-y: hidden;
   overscroll-behavior-inline: contain;
-  scroll-padding-inline: 1.5rem;
-  scroll-snap-type: inline mandatory;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
 }
@@ -408,10 +417,6 @@ code {
   border-radius: 12px;
   outline: 3px solid var(--accent-light);
   outline-offset: 4px;
-}
-
-.featured-work .work-card {
-  scroll-snap-align: start;
 }
 
 .work-carousel__hint {
@@ -591,6 +596,18 @@ code {
   box-shadow: var(--box-shadow);
 }
 
+.cv-actions {
+  display: flex;
+  margin-bottom: 1.25rem;
+  justify-content: flex-end;
+}
+
+.cv-actions .button {
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+}
+
 .cv-header {
   display: grid;
   padding-bottom: 1.75rem;
@@ -600,7 +617,7 @@ code {
 }
 
 .cv-header h1 {
-  font-size: clamp(2.25rem, 6vw, 3.8rem);
+  font-size: 3rem;
 }
 
 .cv-headline {
@@ -657,34 +674,29 @@ code {
 }
 
 @media (min-width: 860px) {
+  .work-carousel {
+    --carousel-width: min(1168px, calc(100vw - 1rem));
+    --carousel-overhang: calc((var(--carousel-width) - 100%) / 2);
+  }
+
   .featured-work .work-grid {
-    width: min(1168px, calc(100vw - 1rem));
-    margin-inline: calc((min(1168px, calc(100vw - 1rem)) - 100%) / -2);
-    grid-auto-columns: calc((100% - 2.5rem) / 3);
+    grid-auto-columns: calc((var(--carousel-width) - 2.5rem) / 3);
   }
 
   .work-carousel__hint {
-    right: calc((min(1168px, calc(100vw - 1rem)) - 100%) / -2 + 2rem);
-  }
-
-  .work-carousel::before {
-    left: calc((min(1168px, calc(100vw - 1rem)) - 100%) / -2);
-  }
-
-  .work-carousel::after {
-    right: calc((min(1168px, calc(100vw - 1rem)) - 100%) / -2);
+    right: calc((var(--carousel-width) - 100%) / -2 + 2rem);
   }
 }
 
 @media (max-width: 700px) {
   .featured-work .work-grid {
+    width: auto;
     grid-auto-columns: auto;
     grid-auto-flow: row;
     grid-template-columns: minmax(0, 1fr);
     margin-inline: 0;
     padding: 0;
     overflow: visible;
-    scroll-snap-type: none;
   }
 
   .work-carousel__hint {
@@ -724,6 +736,10 @@ code {
   .cv-page {
     padding: 1.15rem;
     border-radius: 12px;
+  }
+
+  .cv-header h1 {
+    font-size: 2.1rem;
   }
 
   .cv-header address,

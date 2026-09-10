@@ -37,6 +37,13 @@ Early-career IT professional and multidisciplinary analyst with a Master of Info
 
 ## Experience
 
+### ICT Support Intern — WA Football
+
+*Sep 2026 – Present · Perth, WA*
+
+- Currently completing an ICT support internship within WA Football's internal ICT function under the supervision of the IT Systems Specialist.
+- Gaining practical exposure to day-to-day organisational IT support, troubleshooting, systems and technical documentation in a professional environment.
+
 ### Delivery Work — Uber Eats
 
 *2025-11 – 2026-05 · Perth, WA*

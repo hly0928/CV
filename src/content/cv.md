@@ -23,7 +23,7 @@ Early-career IT professional and multidisciplinary analyst with a Master of Info
 
 **Documentation and content systems** — Technical documentation, docs-as-code, Markdown, Git and GitHub workflows, information architecture, single-sourcing, style guide adherence, knowledge-base organisation, SOPs, troubleshooting guides, user-facing instructions, research and stakeholder communication.
 
-**IT support and systems** — Windows, macOS and Linux; hardware and software troubleshooting; installation, configuration and updates; user support; account, permission and access-control fundamentals; PC assembly and laptop or desktop hardware diagnosis.
+**IT support and systems** — Windows, macOS, iOS, iPadOS and Linux; hardware and software troubleshooting; installation, configuration and updates; device onboarding and offboarding; user support; account, permission and access-control fundamentals; PC assembly and laptop or desktop hardware diagnosis.
 
 **Programming and scripting** — Python, Java, SQL, R, Bash and JavaScript; object-oriented programming, data structures, debugging and reusable scripting.
 
@@ -41,8 +41,9 @@ Early-career IT professional and multidisciplinary analyst with a Master of Info
 
 *Sep 2026 – Present · Perth, WA*
 
-- Currently completing an ICT support internship within WA Football's internal ICT function under the supervision of the IT Systems Specialist.
-- Gaining practical exposure to day-to-day organisational IT support, troubleshooting, systems and technical documentation in a professional environment.
+- Support WA Football's internal ICT function under the supervision of the IT Systems Specialist.
+- Maintain and troubleshoot staff iOS, iPadOS and macOS devices, diagnosing and resolving hardware, software, configuration and update issues.
+- Carry out device onboarding and offboarding in line with organisational process, preparing devices for new staff and recovering and resetting devices from departing staff.
 
 ### Delivery Work — Uber Eats
 
